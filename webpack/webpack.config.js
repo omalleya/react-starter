@@ -1,10 +1,14 @@
 var path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: './src/app.js',
+  performance: {
+    hints: false,
+  },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '../dist')
   },
   module: {
     rules: [
@@ -16,6 +20,6 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist")
+    contentBase: path.resolve(__dirname, "../dist")
   }
 };
