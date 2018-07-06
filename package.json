@@ -6,7 +6,9 @@
   "author": "Aidan O'Malley",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "build-prod": "webpack --mode production",
+    "start": "webpack-dev-server --hot --mode development",
+    "build": "webpack --mode development"
   },
   "dependencies": {
     "path": "^0.12.7",

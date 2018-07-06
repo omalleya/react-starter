@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './')
   },
   module: {
     rules: [
@@ -15,7 +15,8 @@ module.exports = {
       }
     ]
   },
+  performance: { hints: false },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist")
+    contentBase: path.resolve(__dirname, "./")
   }
 };
